@@ -1,5 +1,7 @@
-# HTTP errors
-Throwable HTTP errors for node APIs
+[![Build Status](https://travis-ci.org/fatmatto/throwable-http-errors.svg?branch=master)](https://travis-ci.org/fatmatto/throwable-http-errors)
+
+# Throwable HTTP errors 
+Throwable HTTP errors for node APIs.
 
 ## Installation
 
