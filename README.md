@@ -18,8 +18,8 @@ const Errors = require('httperrors/index.js')
 
 router.post('/', wrap(async (req, res, next) => {
   try {
-    // isValid is some king of validation
-    if (!isValid(req.body) ) {
+    
+    if (!validatePet(req.body) ) {
        throw new Errors.BadRequest()
     }
     let pet = await PetsController.create(req.body)
