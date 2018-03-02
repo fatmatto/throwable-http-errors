@@ -1,5 +1,5 @@
 {
-  "name": "httperrors",
+  "name": "throwable-http-errors",
   "version": "1.0.0",
   "description": "Throwable HTTP Errors for node apis",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fatmatto/httperrors.git"
+    "url": "git+https://github.com/fatmatto/throwable-http-errors.git"
   },
   "keywords": [
     "es6",
@@ -19,9 +19,9 @@
   "author": "Mattia Alfieri",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fatmatto/httperrors/issues"
+    "url": "https://github.com/fatmatto/throwable-http-errors/issues"
   },
-  "homepage": "https://github.com/fatmatto/httperrors#readme",
+  "homepage": "https://github.com/fatmatto/throwable-http-errors#readme",
   "devDependencies": {
     "chai": "^4.1.2"
   }
