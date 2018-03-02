@@ -22,7 +22,7 @@ router.post('/', wrap(async (req, res, next) => {
     if (!isValid(req.body) ) {
        throw new Errors.BadRequest()
     }
-    let pet await PetsController.create(req.body)
+    let pet = await PetsController.create(req.body)
     res.send({status: true, data: pet})
   } catch (e) {
     return next(e)
