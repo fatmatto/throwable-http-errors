@@ -1,8 +1,13 @@
 # HTTP errors
-Throwable HTTP errors for node apis
+Throwable HTTP errors for node APIs
 
+## Installation
 
-# Usage
+```
+npm i throwable-http-errors
+```
+
+## Usage
 
 ```javascript
 const Errors = require('httperrors/index.js')
@@ -23,7 +28,7 @@ router.post('/', wrap(async (req, res, next) => {
 }))
 ```
 
-# Motivation
+## Motivation
  Before async/await, I was used to send errors to the main error catching middleware just by running
  ```javascript
  return next(new Errors.BadRequest())
