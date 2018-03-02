@@ -1,7 +1,6 @@
 'use strict'
 
-let _errors =
-  {
+let _errors = {
     'BadRequest': {
       'statusCode': 400,
       'type': 'BadRequest',
@@ -119,20 +118,22 @@ let _errors =
  */
 class HTTPError extends Error {
   constructor (data) {
+
+    data = data || Object.assign({},_errors["InternalServerError"])
     // Calling parent constructor of base Error class.
-    super(data.message || _errors.InternalServerError.message)
+    super(data.message)
 
     // Saving class name in the property of our custom error as a shortcut.
     this.name = this.constructor.name
 
     // Default error status code
-    this.statusCode = data.statusCode || _errors.InternalServerError.statusCode
+    this.statusCode = data.statusCode
 
     // Default error message
-    this.message = data.message || _errors.InternalServerError.message
+    this.message = data.message
 
     // Default human readable error type
-    this.type = data.type || _errors.InternalServerError.type
+    this.type = data.type
 
     // Capturing stack trace, excluding constructor call from it.
     Error.captureStackTrace(this, this.constructor)

@@ -1,0 +1,28 @@
+{
+  "name": "httperrors",
+  "version": "1.0.0",
+  "description": "Throwable HTTP Errors for node apis",
+  "main": "index.js",
+  "scripts": {
+    "lint": "npx eslint src test --fix",
+    "test": "NODE_ENV=testing npx nyc --reporter=text --check-coverage --lines 90 --all mocha test --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fatmatto/httperrors.git"
+  },
+  "keywords": [
+    "es6",
+    "error",
+    "http"
+  ],
+  "author": "Mattia Alfieri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fatmatto/httperrors/issues"
+  },
+  "homepage": "https://github.com/fatmatto/httperrors#readme",
+  "devDependencies": {
+    "chai": "^4.1.2"
+  }
+}
