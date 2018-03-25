@@ -27,6 +27,16 @@ describe('HTTP Errors Unit Tests', function () {
     expect(err.statusCode).to.equal(500)
   })
 
+  it('Should correctly return the correct JSON', function () {
+    let err = new Errors.BadRequest()
+    expect(err.toJSON()).to.deep.equal({
+      statusCode: 400,
+      type: 'BadRequest',
+      message: 'Bad request',
+      name: 'BadRequest'
+    })
+  })
+
   it('400 BadRequest', function () {
     let err = new Errors.BadRequest()
     expect(err.statusCode).to.equal(400)

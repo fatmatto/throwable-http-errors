@@ -132,131 +132,185 @@ class HTTPError extends Error {
     // Default error message
     this.message = data.message
 
+    // Used to track a reference to messages
+    this._message = data.message
+
     // Default human readable error type
     this.type = data.type
 
     // Capturing stack trace, excluding constructor call from it.
     Error.captureStackTrace(this, this.constructor)
   }
+
+  toJSON() {
+    let self = this;
+
+    return {
+      statusCode : self.statusCode,
+      type : self.type,
+      message : self._message,
+      name: self.name
+    }
+  }
 }
 
 class BadRequest extends HTTPError {
   constructor (message) {
-    super(Object.assign(_errors.BadRequest, {message: message}))
+    let params = Object.assign({},_errors.BadRequest)
+    params.message = message || params.message;
+    super(params)
   }
 }
 
 class Unauthorized extends HTTPError {
   constructor (message) {
-    super(Object.assign(_errors.Unauthorized, {message: message}))
+    let params = Object.assign({}, _errors.Unauthorized)
+    params.message = message || params.message;
+    super(params)
   }
 }
 
 class PaymentRequired extends HTTPError {
   constructor (message) {
-    super(Object.assign(_errors.PaymentRequired, {message: message}))
+    let params = Object.assign({}, _errors.PaymentRequired)
+    params.message = message || params.message;
+    super(params)
   }
 }
 
 class Forbidden extends HTTPError {
   constructor (message) {
-    super(Object.assign(_errors.Forbidden, {message: message}))
+    let params = Object.assign({}, _errors.Forbidden)
+    params.message = message || params.message;
+    super(params)
   }
 }
 
 class NotFound extends HTTPError {
   constructor (message) {
-    super(Object.assign(_errors.NotFound, {message: message}))
+    let params = Object.assign({}, _errors.NotFound)
+    params.message = message || params.message;
+    super(params)
   }
 }
 
 class MethodNotAllowed extends HTTPError {
   constructor (message) {
-    super(Object.assign(_errors.MethodNotAllowed, {message: message}))
+    let params = Object.assign({}, _errors.MethodNotAllowed)
+    params.message = message || params.message;
+    super(params)
   }
 }
 
 class NotAcceptable extends HTTPError {
   constructor (message) {
-    super(Object.assign(_errors.NotAcceptable, {message: message}))
+    let params = Object.assign({}, _errors.NotAcceptable)
+    params.message = message || params.message;
+    super(params)
   }
 }
 
 class RequestTimeout extends HTTPError {
   constructor (message) {
-    super(Object.assign(_errors.RequestTimeout, {message: message}))
+    let params = Object.assign({}, _errors.RequestTimeout)
+    params.message = message || params.message;
+    super(params)
   }
 }
 
 class Conflict extends HTTPError {
   constructor (message) {
-    super(Object.assign(_errors.Conflict, {message: message}))
+    let params = Object.assign({}, _errors.Conflict)
+    params.message = message || params.message;
+    super(params)
   }
 }
 
 class LengthRequired extends HTTPError {
   constructor (message) {
-    super(Object.assign(_errors.LengthRequired, {message: message}))
+    let params = Object.assign({}, _errors.LengthRequired)
+    params.message = message || params.message;
+    super(params)
   }
 }
 
 class PreconditionFailed extends HTTPError {
   constructor (message) {
-    super(Object.assign(_errors.PreconditionFailed, {message: message}))
+    let params = Object.assign({}, _errors.PreconditionFailed)
+    params.message = message || params.message;
+    super(params)
   }
 }
 
 class EntityTooLarge extends HTTPError {
   constructor (message) {
-    super(Object.assign(_errors.EntityTooLarge, {message: message}))
+    let params = Object.assign({}, _errors.EntityTooLarge)
+    params.message = message || params.message;
+    super(params)
   }
 }
 
 class URITooLong extends HTTPError {
   constructor (message) {
-    super(Object.assign(_errors.URITooLong, {message: message}))
+    let params = Object.assign({}, _errors.URITooLong)
+    params.message = message || params.message;
+    super(params)
   }
 }
 
 class UnsupportedMediaType extends HTTPError {
   constructor (message) {
-    super(Object.assign(_errors.UnsupportedMediaType, {message: message}))
+    let params = Object.assign({}, _errors.UnsupportedMediaType)
+    params.message = message || params.message;
+    super(params)
   }
 }
 
 class UnprocessableEntity extends HTTPError {
   constructor (message) {
-    super(Object.assign(_errors.UnprocessableEntity, {message: message}))
+    let params = Object.assign({}, _errors.UnprocessableEntity)
+    params.message = message || params.message;
+    super(params)
   }
 }
 
 class TooManyRequests extends HTTPError {
   constructor (message) {
-    super(Object.assign(_errors.TooManyRequests, {message: message}))
+    let params = Object.assign({}, _errors.TooManyRequests)
+    params.message = message || params.message;
+    super(params)
   }
 }
 
 class RequestHeaderFieldsTooLarge extends HTTPError {
   constructor (message) {
-    super(Object.assign(_errors.RequestHeaderFieldsTooLarge, {message: message}))
+    let params = Object.assign({}, _errors.RequestHeaderFieldsTooLarge)
+    params.message = message || params.message;
+    super(params)
   }
 }
 
 class InternalServerError extends HTTPError {
   constructor (message) {
-    super(Object.assign(_errors.InternalServerError, {message: message}))
+    let params = Object.assign({}, _errors.InternalServerError)
+    params.message = message || params.message;
+    super(params)
   }
 }
 
 class NotImplemented extends HTTPError {
   constructor (message) {
-    super(Object.assign(_errors.NotImplemented, {message: message}))
+    let params = Object.assign({}, _errors.NotImplemented)
+    params.message = message || params.message;
+    super(params)
   }
 }
 
 class BadGateway extends HTTPError {
   constructor (message) {
-    super(Object.assign(_errors.BadGateway, {message: message}))
+    let params = Object.assign({}, _errors.BadGateway)
+    params.message = message || params.message;
+    super(params)
   }
 }
 
