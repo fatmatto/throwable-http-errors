@@ -1,6 +1,6 @@
 {
   "name": "throwable-http-errors",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Throwable HTTP Errors for node apis",
   "main": "index.js",
   "scripts": {
