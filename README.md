@@ -12,7 +12,7 @@ npm i throwable-http-errors
 ## Usage
 
 ```javascript
-const Errors = require('httperrors/index.js')
+const Errors = require('throwable-http-errors')
 
 // for example, using express.js
 
