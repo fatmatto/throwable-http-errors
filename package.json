@@ -4,7 +4,7 @@
   "description": "Throwable HTTP Errors for node apis",
   "main": "index.js",
   "scripts": {
-    "lint": "npx eslint src test --fix",
+    "lint": "npx eslint index.js test --fix",
     "test": "NODE_ENV=testing npx nyc --reporter=text --check-coverage --lines 90 --all mocha test --exit",
     "test-ci": "NODE_ENV=testing npx nyc --check-coverage --lines 90 --all mocha test --exit",
     "release": "release-it"
