@@ -126,6 +126,12 @@ const _errors = {
     type: 'FailedDependency',
     message: 'The method could not be performed on the resource because the requested action depended on another action and that action failed.'
   },
+  TooEarly: {
+    statusCode: 425,
+    type: 'TooEarly',
+    message: 'The server is unwilling to risk processing a request that might be replayed.'
+  },
+
   UpgradeRequired: {
     statusCode: 426,
     type: 'UpgradeRequired',

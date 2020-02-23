@@ -192,6 +192,12 @@ describe('HTTP Errors Unit Tests', function () {
     expect(err.type).to.equal('FailedDependency')
   })
 
+  it('425 Too Early', function () {
+    const err = new Errors.TooEarly()
+    expect(err.statusCode).to.equal(425)
+    expect(err.type).to.equal('TooEarly')
+  })
+
   it('426 Upgrade Required', function () {
     const err = new Errors.UpgradeRequired()
     expect(err.statusCode).to.equal(426)
