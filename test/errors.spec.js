@@ -180,15 +180,21 @@ describe('HTTP Errors Unit Tests', function () {
     expect(err.type).to.equal('FailedDependency')
   })
 
+  it('428 PreconditionRequired', function () {
+    const err = new Errors.PreconditionRequired()
+    expect(err.statusCode).to.equal(428)
+    expect(err.type).to.equal('PreconditionRequired')
+  })
+
   it('429 Too Many Requests', function () {
     const err = new Errors.TooManyRequests()
     expect(err.statusCode).to.equal(429)
     expect(err.type).to.equal('TooManyRequests')
   })
 
-  it('432 Request Header Fields Too Large', function () {
+  it('431 Request Header Fields Too Large', function () {
     const err = new Errors.RequestHeaderFieldsTooLarge()
-    expect(err.statusCode).to.equal(432)
+    expect(err.statusCode).to.equal(431)
     expect(err.type).to.equal('RequestHeaderFieldsTooLarge')
   })
 
@@ -232,5 +238,11 @@ describe('HTTP Errors Unit Tests', function () {
     const err = new Errors.InsufficientStorage()
     expect(err.statusCode).to.equal(507)
     expect(err.type).to.equal('InsufficientStorage')
+  })
+
+  it('511 Network Authentication Required', function () {
+    const err = new Errors.NetworkAuthenticationRequired()
+    expect(err.statusCode).to.equal(511)
+    expect(err.type).to.equal('NetworkAuthenticationRequired')
   })
 })

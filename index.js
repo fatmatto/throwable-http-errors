@@ -111,13 +111,18 @@ const _errors = {
     type: 'FailedDependency',
     message: 'The method could not be performed on the resource because the requested action depended on another action and that action failed.'
   },
+  PreconditionRequired: {
+    statusCode: 428,
+    type: 'PreconditionRequired',
+    message: 'The origin server requires the request to be conditional.'
+  },
   TooManyRequests: {
     statusCode: 429,
     type: 'TooManyRequests',
-    message: 'The user has sent too many requests in a given amount of time. more info at GET /v0/rate.'
+    message: 'The user has sent too many requests in a given amount of time.'
   },
   RequestHeaderFieldsTooLarge: {
-    statusCode: 432,
+    statusCode: 431,
     type: 'RequestHeaderFieldsTooLarge',
     message: 'The server is unwilling to process the request because its header fields are too large.'
   },
@@ -155,6 +160,11 @@ const _errors = {
     statusCode: 507,
     type: 'InsufficientStorage',
     message: 'The method could not be performed on the resource because the server is unable to store the representation needed to successfully complete the request.'
+  },
+  NetworkAuthenticationRequired: {
+    statusCode: 511,
+    type: 'NetworkAuthenticationRequired',
+    message: 'The client needs to authenticate to gain network access.'
   }
 }
 
