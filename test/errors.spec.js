@@ -31,7 +31,7 @@ describe('HTTP Errors Unit Tests', function () {
     expect(err.toJSON()).to.deep.equal({
       statusCode: 400,
       type: 'BadRequest',
-      message: 'Bad request',
+      message: 'The request could not be understood by the server due to malformed syntax.',
       name: 'BadRequest'
     })
   })
@@ -78,6 +78,12 @@ describe('HTTP Errors Unit Tests', function () {
     expect(err.type).to.equal('NotAcceptable')
   })
 
+  it('407 Proxy Authentication Required', function () {
+    const err = new Errors.ProxyAuthenticationRequired()
+    expect(err.statusCode).to.equal(407)
+    expect(err.type).to.equal('ProxyAuthenticationRequired')
+  })
+
   it('408 Request Timeout', function () {
     const err = new Errors.RequestTimeout()
     expect(err.statusCode).to.equal(408)
@@ -88,6 +94,12 @@ describe('HTTP Errors Unit Tests', function () {
     const err = new Errors.Conflict()
     expect(err.statusCode).to.equal(409)
     expect(err.type).to.equal('Conflict')
+  })
+
+  it('410 Gone', function () {
+    const err = new Errors.Gone()
+    expect(err.statusCode).to.equal(410)
+    expect(err.type).to.equal('Gone')
   })
 
   it('411 Length Required', function () {
@@ -102,13 +114,31 @@ describe('HTTP Errors Unit Tests', function () {
     expect(err.type).to.equal('PreconditionFailed')
   })
 
-  it('413 Entity Too Large', function () {
+  it('413 Request Entity Too Large', function () {
+    const err = new Errors.RequestEntityTooLarge()
+    expect(err.statusCode).to.equal(413)
+    expect(err.type).to.equal('RequestEntityTooLarge')
+  })
+
+  it('413 Entity Too Large - alias', function () {
     const err = new Errors.EntityTooLarge()
     expect(err.statusCode).to.equal(413)
     expect(err.type).to.equal('EntityTooLarge')
   })
 
-  it('414 URI Too Long', function () {
+  it('413 Payload Too Large', function () {
+    const err = new Errors.PayloadTooLarge()
+    expect(err.statusCode).to.equal(413)
+    expect(err.type).to.equal('PayloadTooLarge')
+  })
+
+  it('414 Request-URI Too Long', function () {
+    const err = new Errors.RequestURITooLong()
+    expect(err.statusCode).to.equal(414)
+    expect(err.type).to.equal('RequestURITooLong')
+  })
+
+  it('414 URI Too Long - alias', function () {
     const err = new Errors.URITooLong()
     expect(err.statusCode).to.equal(414)
     expect(err.type).to.equal('URITooLong')
@@ -118,6 +148,18 @@ describe('HTTP Errors Unit Tests', function () {
     const err = new Errors.UnsupportedMediaType()
     expect(err.statusCode).to.equal(415)
     expect(err.type).to.equal('UnsupportedMediaType')
+  })
+
+  it('416 Requested Range Not Satisfiable', function () {
+    const err = new Errors.RequestedRangeNotSatisfiable()
+    expect(err.statusCode).to.equal(416)
+    expect(err.type).to.equal('RequestedRangeNotSatisfiable')
+  })
+
+  it('417 Expectation Failed', function () {
+    const err = new Errors.ExpectationFailed()
+    expect(err.statusCode).to.equal(417)
+    expect(err.type).to.equal('ExpectationFailed')
   })
 
   it('422 Unprocessable Entity', function () {
@@ -154,5 +196,23 @@ describe('HTTP Errors Unit Tests', function () {
     const err = new Errors.BadGateway()
     expect(err.statusCode).to.equal(502)
     expect(err.type).to.equal('BadGateway')
+  })
+
+  it('503 Service Unavailable', function () {
+    const err = new Errors.ServiceUnavailable()
+    expect(err.statusCode).to.equal(503)
+    expect(err.type).to.equal('ServiceUnavailable')
+  })
+
+  it('504 Gateway Timeout', function () {
+    const err = new Errors.GatewayTimeout()
+    expect(err.statusCode).to.equal(504)
+    expect(err.type).to.equal('GatewayTimeout')
+  })
+
+  it('505 HTTP Version Not Supported', function () {
+    const err = new Errors.HTTPVersionNotSupported()
+    expect(err.statusCode).to.equal(505)
+    expect(err.type).to.equal('HTTPVersionNotSupported')
   })
 })
