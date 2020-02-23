@@ -264,6 +264,12 @@ describe('HTTP Errors Unit Tests', function () {
     expect(err.type).to.equal('HTTPVersionNotSupported')
   })
 
+  it('506 Variant Also Negotiates', function () {
+    const err = new Errors.VariantAlsoNegotiates()
+    expect(err.statusCode).to.equal(506)
+    expect(err.type).to.equal('VariantAlsoNegotiates')
+  })
+
   it('507 Insufficient Storage', function () {
     const err = new Errors.InsufficientStorage()
     expect(err.statusCode).to.equal(507)

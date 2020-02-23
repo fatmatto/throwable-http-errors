@@ -187,6 +187,11 @@ const _errors = {
     type: 'HTTPVersionNotSupported',
     message: 'The server does not support, or refuses to support, the HTTP protocol version that was used in the request message.'
   },
+  VariantAlsoNegotiates: {
+    statusCode: 506,
+    type: 'VariantAlsoNegotiates',
+    message: 'The server has an internal configuration error: the chosen variant resource is configured to engage in transparent content negotiation itself, and is therefore not a proper end point in the negotiation process.'
+  },
   InsufficientStorage: {
     statusCode: 507,
     type: 'InsufficientStorage',
