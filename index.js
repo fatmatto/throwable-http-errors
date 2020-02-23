@@ -99,7 +99,17 @@ const _errors = {
   UnprocessableEntity: {
     statusCode: 422,
     type: 'UnprocessableEntity',
-    message: 'The syntax of the request is correct but some values could be invalid (e.g. wrong type).'
+    message: 'The the server understands the content type of the request entity, and the syntax of the request entity is correct but was unable to process the contained instructions.'
+  },
+  Locked: {
+    statusCode: 423,
+    type: 'Locked',
+    message: 'The source or destination resource of a method is locked.'
+  },
+  FailedDependency: {
+    statusCode: 424,
+    type: 'FailedDependency',
+    message: 'The method could not be performed on the resource because the requested action depended on another action and that action failed.'
   },
   TooManyRequests: {
     statusCode: 429,
@@ -140,6 +150,11 @@ const _errors = {
     statusCode: 505,
     type: 'HTTPVersionNotSupported',
     message: 'The server does not support, or refuses to support, the HTTP protocol version that was used in the request message.'
+  },
+  InsufficientStorage: {
+    statusCode: 507,
+    type: 'InsufficientStorage',
+    message: 'The method could not be performed on the resource because the server is unable to store the representation needed to successfully complete the request.'
   }
 }
 

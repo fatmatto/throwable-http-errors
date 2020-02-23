@@ -168,6 +168,18 @@ describe('HTTP Errors Unit Tests', function () {
     expect(err.type).to.equal('UnprocessableEntity')
   })
 
+  it('423 Locked', function () {
+    const err = new Errors.Locked()
+    expect(err.statusCode).to.equal(423)
+    expect(err.type).to.equal('Locked')
+  })
+
+  it('424 FailedDependency', function () {
+    const err = new Errors.FailedDependency()
+    expect(err.statusCode).to.equal(424)
+    expect(err.type).to.equal('FailedDependency')
+  })
+
   it('429 Too Many Requests', function () {
     const err = new Errors.TooManyRequests()
     expect(err.statusCode).to.equal(429)
@@ -214,5 +226,11 @@ describe('HTTP Errors Unit Tests', function () {
     const err = new Errors.HTTPVersionNotSupported()
     expect(err.statusCode).to.equal(505)
     expect(err.type).to.equal('HTTPVersionNotSupported')
+  })
+
+  it('507 Insufficient Storage', function () {
+    const err = new Errors.InsufficientStorage()
+    expect(err.statusCode).to.equal(507)
+    expect(err.type).to.equal('InsufficientStorage')
   })
 })
