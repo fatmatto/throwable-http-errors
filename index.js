@@ -6,11 +6,6 @@ const _errors = {
     type: 'BadRequest',
     message: 'Bad request'
   },
-  ValidationError: {
-    statusCode: 400,
-    type: 'BadRequest',
-    message: 'ValidationError: your request contains invalid data.'
-  },
   Unauthorized: {
     statusCode: 401,
     type: 'Unauthorized',
@@ -153,186 +148,13 @@ class HTTPError extends Error {
   }
 }
 
-class BadRequest extends HTTPError {
-  constructor (message) {
-    const params = Object.assign({}, _errors.BadRequest)
-    params.message = message || params.message
-    super(params)
-  }
-}
-
-class Unauthorized extends HTTPError {
-  constructor (message) {
-    const params = Object.assign({}, _errors.Unauthorized)
-    params.message = message || params.message
-    super(params)
-  }
-}
-
-class PaymentRequired extends HTTPError {
-  constructor (message) {
-    const params = Object.assign({}, _errors.PaymentRequired)
-    params.message = message || params.message
-    super(params)
-  }
-}
-
-class Forbidden extends HTTPError {
-  constructor (message) {
-    const params = Object.assign({}, _errors.Forbidden)
-    params.message = message || params.message
-    super(params)
-  }
-}
-
-class NotFound extends HTTPError {
-  constructor (message) {
-    const params = Object.assign({}, _errors.NotFound)
-    params.message = message || params.message
-    super(params)
-  }
-}
-
-class MethodNotAllowed extends HTTPError {
-  constructor (message) {
-    const params = Object.assign({}, _errors.MethodNotAllowed)
-    params.message = message || params.message
-    super(params)
-  }
-}
-
-class NotAcceptable extends HTTPError {
-  constructor (message) {
-    const params = Object.assign({}, _errors.NotAcceptable)
-    params.message = message || params.message
-    super(params)
-  }
-}
-
-class RequestTimeout extends HTTPError {
-  constructor (message) {
-    const params = Object.assign({}, _errors.RequestTimeout)
-    params.message = message || params.message
-    super(params)
-  }
-}
-
-class Conflict extends HTTPError {
-  constructor (message) {
-    const params = Object.assign({}, _errors.Conflict)
-    params.message = message || params.message
-    super(params)
-  }
-}
-
-class LengthRequired extends HTTPError {
-  constructor (message) {
-    const params = Object.assign({}, _errors.LengthRequired)
-    params.message = message || params.message
-    super(params)
-  }
-}
-
-class PreconditionFailed extends HTTPError {
-  constructor (message) {
-    const params = Object.assign({}, _errors.PreconditionFailed)
-    params.message = message || params.message
-    super(params)
-  }
-}
-
-class EntityTooLarge extends HTTPError {
-  constructor (message) {
-    const params = Object.assign({}, _errors.EntityTooLarge)
-    params.message = message || params.message
-    super(params)
-  }
-}
-
-class URITooLong extends HTTPError {
-  constructor (message) {
-    const params = Object.assign({}, _errors.URITooLong)
-    params.message = message || params.message
-    super(params)
-  }
-}
-
-class UnsupportedMediaType extends HTTPError {
-  constructor (message) {
-    const params = Object.assign({}, _errors.UnsupportedMediaType)
-    params.message = message || params.message
-    super(params)
-  }
-}
-
-class UnprocessableEntity extends HTTPError {
-  constructor (message) {
-    const params = Object.assign({}, _errors.UnprocessableEntity)
-    params.message = message || params.message
-    super(params)
-  }
-}
-
-class TooManyRequests extends HTTPError {
-  constructor (message) {
-    const params = Object.assign({}, _errors.TooManyRequests)
-    params.message = message || params.message
-    super(params)
-  }
-}
-
-class RequestHeaderFieldsTooLarge extends HTTPError {
-  constructor (message) {
-    const params = Object.assign({}, _errors.RequestHeaderFieldsTooLarge)
-    params.message = message || params.message
-    super(params)
-  }
-}
-
-class InternalServerError extends HTTPError {
-  constructor (message) {
-    const params = Object.assign({}, _errors.InternalServerError)
-    params.message = message || params.message
-    super(params)
-  }
-}
-
-class NotImplemented extends HTTPError {
-  constructor (message) {
-    const params = Object.assign({}, _errors.NotImplemented)
-    params.message = message || params.message
-    super(params)
-  }
-}
-
-class BadGateway extends HTTPError {
-  constructor (message) {
-    const params = Object.assign({}, _errors.BadGateway)
-    params.message = message || params.message
-    super(params)
-  }
-}
-
-module.exports = {
-  HTTPError,
-  BadRequest,
-  Unauthorized,
-  PaymentRequired,
-  Forbidden,
-  NotFound,
-  MethodNotAllowed,
-  NotAcceptable,
-  RequestTimeout,
-  Conflict,
-  LengthRequired,
-  PreconditionFailed,
-  EntityTooLarge,
-  URITooLong,
-  UnsupportedMediaType,
-  UnprocessableEntity,
-  TooManyRequests,
-  RequestHeaderFieldsTooLarge,
-  InternalServerError,
-  NotImplemented,
-  BadGateway
-}
+module.exports = Object.keys(_errors)
+  .reduce((acc, className) => Object.assign(acc, {
+    [className]: class extends HTTPError {
+      constructor (message) {
+        const params = Object.assign({}, _errors[className])
+        params.message = message || params.message
+        super(params)
+      }
+    }
+  }), { HTTPError })

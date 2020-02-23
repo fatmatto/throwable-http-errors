@@ -36,7 +36,7 @@ describe('HTTP Errors Unit Tests', function () {
     })
   })
 
-  it('400 BadRequest', function () {
+  it('400 Bad Request', function () {
     const err = new Errors.BadRequest()
     expect(err.statusCode).to.equal(400)
     expect(err.type).to.equal('BadRequest')
@@ -48,7 +48,7 @@ describe('HTTP Errors Unit Tests', function () {
     expect(err.type).to.equal('Unauthorized')
   })
 
-  it('402 PaymentRequired', function () {
+  it('402 Payment Required', function () {
     const err = new Errors.PaymentRequired()
     expect(err.statusCode).to.equal(402)
     expect(err.type).to.equal('PaymentRequired')
@@ -60,25 +60,25 @@ describe('HTTP Errors Unit Tests', function () {
     expect(err.type).to.equal('Forbidden')
   })
 
-  it('404 NotFound', function () {
+  it('404 Not Found', function () {
     const err = new Errors.NotFound()
     expect(err.statusCode).to.equal(404)
     expect(err.type).to.equal('NotFound')
   })
 
-  it('405 MethodNotAllowed', function () {
+  it('405 Method Not Allowed', function () {
     const err = new Errors.MethodNotAllowed()
     expect(err.statusCode).to.equal(405)
     expect(err.type).to.equal('MethodNotAllowed')
   })
 
-  it('406 NotAcceptable', function () {
+  it('406 Not Acceptable', function () {
     const err = new Errors.NotAcceptable()
     expect(err.statusCode).to.equal(406)
     expect(err.type).to.equal('NotAcceptable')
   })
 
-  it('408 RequestTimeout', function () {
+  it('408 Request Timeout', function () {
     const err = new Errors.RequestTimeout()
     expect(err.statusCode).to.equal(408)
     expect(err.type).to.equal('RequestTimeout')
@@ -90,67 +90,67 @@ describe('HTTP Errors Unit Tests', function () {
     expect(err.type).to.equal('Conflict')
   })
 
-  it('411 LengthRequired', function () {
+  it('411 Length Required', function () {
     const err = new Errors.LengthRequired()
     expect(err.statusCode).to.equal(411)
     expect(err.type).to.equal('LengthRequired')
   })
 
-  it('412 PreconditionFailed', function () {
+  it('412 Precondition Failed', function () {
     const err = new Errors.PreconditionFailed()
     expect(err.statusCode).to.equal(412)
     expect(err.type).to.equal('PreconditionFailed')
   })
 
-  it('413 EntityTooLarge', function () {
+  it('413 Entity Too Large', function () {
     const err = new Errors.EntityTooLarge()
     expect(err.statusCode).to.equal(413)
     expect(err.type).to.equal('EntityTooLarge')
   })
 
-  it('414 URITooLong', function () {
+  it('414 URI Too Long', function () {
     const err = new Errors.URITooLong()
     expect(err.statusCode).to.equal(414)
     expect(err.type).to.equal('URITooLong')
   })
 
-  it('415 UnsupportedMediaType', function () {
+  it('415 Unsupported Media Type', function () {
     const err = new Errors.UnsupportedMediaType()
     expect(err.statusCode).to.equal(415)
     expect(err.type).to.equal('UnsupportedMediaType')
   })
 
-  it('422 UnprocessableEntity', function () {
+  it('422 Unprocessable Entity', function () {
     const err = new Errors.UnprocessableEntity()
     expect(err.statusCode).to.equal(422)
     expect(err.type).to.equal('UnprocessableEntity')
   })
 
-  it('429 TooManyRequests', function () {
+  it('429 Too Many Requests', function () {
     const err = new Errors.TooManyRequests()
     expect(err.statusCode).to.equal(429)
     expect(err.type).to.equal('TooManyRequests')
   })
 
-  it('432 RequestHeaderFieldsTooLarge', function () {
+  it('432 Request Header Fields Too Large', function () {
     const err = new Errors.RequestHeaderFieldsTooLarge()
     expect(err.statusCode).to.equal(432)
     expect(err.type).to.equal('RequestHeaderFieldsTooLarge')
   })
 
-  it('500 InternalServerError', function () {
+  it('500 Internal Server Error', function () {
     const err = new Errors.InternalServerError()
     expect(err.statusCode).to.equal(500)
     expect(err.type).to.equal('InternalServerError')
   })
 
-  it('501 NotImplemented', function () {
+  it('501 Not Implemented', function () {
     const err = new Errors.NotImplemented()
     expect(err.statusCode).to.equal(501)
     expect(err.type).to.equal('NotImplemented')
   })
 
-  it('502 BadGateway', function () {
+  it('502 Bad Gateway', function () {
     const err = new Errors.BadGateway()
     expect(err.statusCode).to.equal(502)
     expect(err.type).to.equal('BadGateway')
