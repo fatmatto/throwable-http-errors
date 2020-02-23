@@ -156,6 +156,12 @@ describe('HTTP Errors Unit Tests', function () {
     expect(err.type).to.equal('RequestedRangeNotSatisfiable')
   })
 
+  it('416 Range Not Satisfiable', function () {
+    const err = new Errors.RangeNotSatisfiable()
+    expect(err.statusCode).to.equal(416)
+    expect(err.type).to.equal('RangeNotSatisfiable')
+  })
+
   it('417 Expectation Failed', function () {
     const err = new Errors.ExpectationFailed()
     expect(err.statusCode).to.equal(417)

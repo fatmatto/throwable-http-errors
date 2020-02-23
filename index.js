@@ -96,6 +96,11 @@ const _errors = {
     type: 'RequestedRangeNotSatisfiable',
     message: 'The request included a Range request-header field, and none of the range-specifier values in this field overlap the current extent of the selected resource, and the request did not include an If-Range request-header field.'
   },
+  RangeNotSatisfiable: {
+    statusCode: 416,
+    type: 'RangeNotSatisfiable',
+    message: "None of the ranges in the request's Range header field overlap the current extent of the selected resource or the set of ranges requested has been rejected due to invalid ranges or an excessive request of small or overlapping ranges."
+  },
   ExpectationFailed: {
     statusCode: 417,
     type: 'ExpectationFailed',
