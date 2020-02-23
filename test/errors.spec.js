@@ -216,6 +216,12 @@ describe('HTTP Errors Unit Tests', function () {
     expect(err.type).to.equal('RequestHeaderFieldsTooLarge')
   })
 
+  it('451 Unavailable For Legal Reasons', function () {
+    const err = new Errors.UnavailableForLegalReasons()
+    expect(err.statusCode).to.equal(451)
+    expect(err.type).to.equal('UnavailableForLegalReasons')
+  })
+
   it('500 Internal Server Error', function () {
     const err = new Errors.InternalServerError()
     expect(err.statusCode).to.equal(500)

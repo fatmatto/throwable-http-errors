@@ -146,6 +146,11 @@ const _errors = {
     type: 'RequestHeaderFieldsTooLarge',
     message: 'The server is unwilling to process the request because its header fields are too large.'
   },
+  UnavailableForLegalReasons: {
+    statusCode: 451,
+    type: 'UnavailableForLegalReasons',
+    message: 'The server is denying access to the resource as a consequence of a legal demand.'
+  },
   InternalServerError: {
     statusCode: 500,
     type: 'InternalServerError',
