@@ -168,6 +168,12 @@ describe('HTTP Errors Unit Tests', function () {
     expect(err.type).to.equal('ExpectationFailed')
   })
 
+  it('421 Misdirected Request', function () {
+    const err = new Errors.MisdirectedRequest()
+    expect(err.statusCode).to.equal(421)
+    expect(err.type).to.equal('MisdirectedRequest')
+  })
+
   it('422 Unprocessable Entity', function () {
     const err = new Errors.UnprocessableEntity()
     expect(err.statusCode).to.equal(422)

@@ -106,6 +106,11 @@ const _errors = {
     type: 'ExpectationFailed',
     message: 'The expectation given in an Expect request-header field could not be met by this server.'
   },
+  MisdirectedRequest: {
+    statusCode: 421,
+    type: 'MisdirectedRequest',
+    message: 'The request was directed at a server that is not able to produce a response.'
+  },
   UnprocessableEntity: {
     statusCode: 422,
     type: 'UnprocessableEntity',
