@@ -138,7 +138,7 @@ describe('HTTP Errors Unit Tests', function () {
     expect(err.type).to.equal('RequestURITooLong')
   })
 
-  it('414 URI Too Long - alias', function () {
+  it('414 URI Too Long', function () {
     const err = new Errors.URITooLong()
     expect(err.statusCode).to.equal(414)
     expect(err.type).to.equal('URITooLong')
@@ -174,13 +174,19 @@ describe('HTTP Errors Unit Tests', function () {
     expect(err.type).to.equal('Locked')
   })
 
-  it('424 FailedDependency', function () {
+  it('424 Failed Dependency', function () {
     const err = new Errors.FailedDependency()
     expect(err.statusCode).to.equal(424)
     expect(err.type).to.equal('FailedDependency')
   })
 
-  it('428 PreconditionRequired', function () {
+  it('426 Upgrade Required', function () {
+    const err = new Errors.UpgradeRequired()
+    expect(err.statusCode).to.equal(426)
+    expect(err.type).to.equal('UpgradeRequired')
+  })
+
+  it('428 Precondition Required', function () {
     const err = new Errors.PreconditionRequired()
     expect(err.statusCode).to.equal(428)
     expect(err.type).to.equal('PreconditionRequired')

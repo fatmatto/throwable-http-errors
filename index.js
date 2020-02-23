@@ -74,12 +74,17 @@ const _errors = {
   PayloadTooLarge: {
     statusCode: 413,
     type: 'PayloadTooLarge',
-    message: 'The request entity is too large to be processed.'
+    message: 'The server is refusing to process a request because the request payload is larger than the server is willing or able to process.'
   },
   RequestURITooLong: {
     statusCode: 414,
     type: 'RequestURITooLong',
     message: 'The server is refusing to service the request because the Request-URI is longer than the server is willing to interpret.'
+  },
+  URITooLong: {
+    statusCode: 414,
+    type: 'URITooLong',
+    message: 'The server is refusing to service the request because the request-target is longer than the server is willing to interpret.'
   },
   UnsupportedMediaType: {
     statusCode: 415,
@@ -110,6 +115,11 @@ const _errors = {
     statusCode: 424,
     type: 'FailedDependency',
     message: 'The method could not be performed on the resource because the requested action depended on another action and that action failed.'
+  },
+  UpgradeRequired: {
+    statusCode: 426,
+    type: 'UpgradeRequired',
+    message: 'The server refuses to perform the request using the current protocol but might be willing to do so after the client upgrades to a different protocol.'
   },
   PreconditionRequired: {
     statusCode: 428,
@@ -170,7 +180,6 @@ const _errors = {
 
 // aliases
 _errors.EntityTooLarge = Object.assign({}, _errors.RequestEntityTooLarge, { type: 'EntityTooLarge' })
-_errors.URITooLong = Object.assign({}, _errors.RequestURITooLong, { type: 'URITooLong' })
 
 /**
  * @class Base class for HTTP Errors.
