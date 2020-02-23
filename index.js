@@ -197,6 +197,11 @@ const _errors = {
     type: 'InsufficientStorage',
     message: 'The method could not be performed on the resource because the server is unable to store the representation needed to successfully complete the request.'
   },
+  LoopDetected: {
+    statusCode: 508,
+    type: 'LoopDetected',
+    message: 'The server terminated an operation because it encountered an infinite loop while processing a request with "Depth: infinity".'
+  },
   NotExtended: {
     statusCode: 510,
     type: 'NotExtended',

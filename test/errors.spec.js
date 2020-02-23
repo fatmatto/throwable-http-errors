@@ -276,6 +276,12 @@ describe('HTTP Errors Unit Tests', function () {
     expect(err.type).to.equal('InsufficientStorage')
   })
 
+  it('508 Loop Detected', function () {
+    const err = new Errors.LoopDetected()
+    expect(err.statusCode).to.equal(508)
+    expect(err.type).to.equal('LoopDetected')
+  })
+
   it('510 Not Extended', function () {
     const err = new Errors.NotExtended()
     expect(err.statusCode).to.equal(510)
