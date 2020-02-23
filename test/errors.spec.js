@@ -276,6 +276,12 @@ describe('HTTP Errors Unit Tests', function () {
     expect(err.type).to.equal('InsufficientStorage')
   })
 
+  it('510 Not Extended', function () {
+    const err = new Errors.NotExtended()
+    expect(err.statusCode).to.equal(510)
+    expect(err.type).to.equal('NotExtended')
+  })
+
   it('511 Network Authentication Required', function () {
     const err = new Errors.NetworkAuthenticationRequired()
     expect(err.statusCode).to.equal(511)

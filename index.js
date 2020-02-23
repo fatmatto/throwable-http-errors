@@ -197,6 +197,11 @@ const _errors = {
     type: 'InsufficientStorage',
     message: 'The method could not be performed on the resource because the server is unable to store the representation needed to successfully complete the request.'
   },
+  NotExtended: {
+    statusCode: 510,
+    type: 'NotExtended',
+    message: 'The policy for accessing the resource has not been met in the request.'
+  },
   NetworkAuthenticationRequired: {
     statusCode: 511,
     type: 'NetworkAuthenticationRequired',
