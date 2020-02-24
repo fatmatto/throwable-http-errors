@@ -4,9 +4,10 @@
   "description": "Throwable HTTP Errors for node apis",
   "main": "index.js",
   "scripts": {
-    "lint": "npx eslint src test --fix",
+    "lint": "npx eslint index.js test --fix",
     "test": "NODE_ENV=testing npx nyc --reporter=text --check-coverage --lines 90 --all mocha test --exit",
-    "test-ci": "NODE_ENV=testing npx nyc --check-coverage --lines 90 --all mocha test --exit"
+    "test-ci": "NODE_ENV=testing npx nyc --check-coverage --lines 90 --all mocha test --exit",
+    "release": "release-it"
   },
   "repository": {
     "type": "git",
@@ -24,14 +25,27 @@
   },
   "homepage": "https://github.com/fatmatto/throwable-http-errors#readme",
   "devDependencies": {
+    "@release-it/conventional-changelog": "^1.1.0",
     "chai": "^4.1.2",
-    "eslint": "^4.19.1",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-chai-friendly": "^0.4.1",
-    "eslint-plugin-import": "^2.9.0",
-    "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.7.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "mocha": "^5.0.1"
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-chai-friendly": "^0.5.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "mocha": "^7.0.1",
+    "release-it": "^12.6.1"
+  },
+  "release-it": {
+    "github": {
+      "release": true
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular",
+        "infile": "CHANGELOG.md"
+      }
+    }
   }
 }

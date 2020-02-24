@@ -1,0 +1,20 @@
+{
+  "env": {
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "plugin:chai-friendly/recommended",
+    "standard"
+  ],
+  "globals": {
+    "it": true,
+    "describe": true,
+    "before": true,
+    "after": true
+  },
+  "plugins": [
+    "chai-friendly"
+  ]
+}
