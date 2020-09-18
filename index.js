@@ -131,7 +131,6 @@ const _errors = {
     type: 'TooEarly',
     message: 'The server is unwilling to risk processing a request that might be replayed.'
   },
-
   UpgradeRequired: {
     statusCode: 426,
     type: 'UpgradeRequired',
