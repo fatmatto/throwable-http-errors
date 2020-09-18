@@ -234,9 +234,6 @@ class HTTPError extends Error {
     // Default error message
     this.message = data.message
 
-    // Used to track a reference to messages
-    this._message = data.message
-
     // Default human readable error type
     this.type = data.type
 
@@ -245,13 +242,11 @@ class HTTPError extends Error {
   }
 
   toJSON () {
-    const self = this
-
     return {
-      statusCode: self.statusCode,
-      type: self.type,
-      message: self._message,
-      name: self.name
+      statusCode: this.statusCode,
+      type: this.type,
+      message: this.message,
+      name: this.name
     }
   }
 }
