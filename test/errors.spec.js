@@ -1,5 +1,4 @@
 'use strict'
-
 const Errors = require('../index')
 const chai = require('chai')
 
