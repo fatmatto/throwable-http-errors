@@ -1,0 +1,30 @@
+# 📦 2.0.2 (3 Aug 2022)
+- [1bd81](https://github.com/fatmatto/throwable-http-errors/commit/1bd8184f7e0c701df5cc0636feeff7173d09559b)  📦 Release 2.0.2
+- [c9dad](https://github.com/fatmatto/throwable-http-errors/commit/c9dad7ed2b8400bf00d78153f5170542cfc5274c)  chore: add release script
+- [a10e2](https://github.com/fatmatto/throwable-http-errors/commit/a10e25460ff659fa2216ec8adee161e56c20c9c1)  chore: security update
+- [33df4](https://github.com/fatmatto/throwable-http-errors/commit/33df4aefe7e60c873bc825e54ed0070fd59c8dbc)  Bump pathval from 1.1.0 to 1.1.1 (#10)
+- [492d0](https://github.com/fatmatto/throwable-http-errors/commit/492d08ed053b0b98b287f10e00cbb27c59dff50d)  Bump path-parse from 1.0.6 to 1.0.7 (#9)
+- [07950](https://github.com/fatmatto/throwable-http-errors/commit/0795055b9a3dcc36bd65f6fa8ec0a81d6e1e51d0)  Bump glob-parent from 5.1.1 to 5.1.2 (#8)
+- [c300b](https://github.com/fatmatto/throwable-http-errors/commit/c300b431fb627344c9a834ab363c3c65f34db78e)  Bump lodash from 4.17.20 to 4.17.21 (#6)
+- [e9b08](https://github.com/fatmatto/throwable-http-errors/commit/e9b0840044d13a6bd6d8a563c81a41e01f5632ff)  Bump hosted-git-info from 2.8.8 to 2.8.9 (#7)
+- [c1d67](https://github.com/fatmatto/throwable-http-errors/commit/c1d67761eefbfe01393241d386a4497db76d992a)  Bump y18n from 4.0.0 to 4.0.1 (#5)
+- [05eda](https://github.com/fatmatto/throwable-http-errors/commit/05edad007916a55c62552c25a6442ccfd51380a5)  add createErrorFromStatusCode function
+- [d775f](https://github.com/fatmatto/throwable-http-errors/commit/d775f4a090f31b05b6e5af8517dda17dbbad155d)  2.0.1
+- [8ced1](https://github.com/fatmatto/throwable-http-errors/commit/8ced1cbea8c4d1baa35b52188af7d7e7a3838e58)  Refactor due to VS Code IntelliSense (#4)
+- [c72c4](https://github.com/fatmatto/throwable-http-errors/commit/c72c46fc02a1cfbbd338584cefc83bb8994bf88a)  Bump acorn from 7.1.0 to 7.1.1 (#2)
+- [edf5f](https://github.com/fatmatto/throwable-http-errors/commit/edf5f54cfdf14d4b1f7122465b81c638c47ae83c)  Chore: Bump to 2.0.0
+- [b59b9](https://github.com/fatmatto/throwable-http-errors/commit/b59b999b39ea308b7c755d12887294c68cbbe495)  Added missing status codes and made some refactor (#1)
+- [e6bbb](https://github.com/fatmatto/throwable-http-errors/commit/e6bbb698c3508bc3a71b09d4b95e49fcd8192b80)  Update README.md
+# 📦 1.0.1 (25 Mar 2018)
+- [fd72f](https://github.com/fatmatto/throwable-http-errors/commit/fd72faedc263c068de2d230dcb774f3d45818a0f)  Bumped version
+- [54fcf](https://github.com/fatmatto/throwable-http-errors/commit/54fcf5497fd31028b455943a82cdd718c1abcb15)  Reworked internals to fix custom message bug
+- [ba193](https://github.com/fatmatto/throwable-http-errors/commit/ba193b00051f8cb15cde36e0725a1d2fb717351f)  Update README.md
+- [69c06](https://github.com/fatmatto/throwable-http-errors/commit/69c0642afdbdf997446eb75328659d444d3b1b64)  Update README.md
+- [b89c4](https://github.com/fatmatto/throwable-http-errors/commit/b89c4d4240060d670d9545327bef1f0bc4416e0b)  Update README.md
+- [15baf](https://github.com/fatmatto/throwable-http-errors/commit/15bafef26e9961e05dceed1d299312fbc851ba23)  Added travis config and added dev dependencies for automated testing
+- [7b500](https://github.com/fatmatto/throwable-http-errors/commit/7b50090dfd3d3fe3e4f85a030c4dbf5b00f86039)  Formatted README
+- [9484b](https://github.com/fatmatto/throwable-http-errors/commit/9484bf57059e94ec1974b6a15590a0a45d5e9535)  Fixed package.json with project name
+- [70efb](https://github.com/fatmatto/throwable-http-errors/commit/70efb786cd3a0558de07e9c65badbdedef713642)  Corrected default behaviour of the bare HTTPError class. Added unit tests
+- [dfc92](https://github.com/fatmatto/throwable-http-errors/commit/dfc922175b0555686f015e5679e49a356a44b564)  Update README.md
+- [521c0](https://github.com/fatmatto/throwable-http-errors/commit/521c050c45d625ccd3f81051e4b8abd16ebe2c57)  Create index.js
+- [c30ef](https://github.com/fatmatto/throwable-http-errors/commit/c30ef5e5a458f87f9421b3adfda72e45a25471e6)  Initial commit
