@@ -1,3 +1,11 @@
+# 📦 2.0.3 (21 Jan 2025)
+- [4e1e4](https://github.com/fatmatto/throwable-http-errors/commit/4e1e4d6295ca779329efea2b42b629511b788cbc)  📦 Release 2.0.3
+- [82bdd](https://github.com/fatmatto/throwable-http-errors/commit/82bdd7b265d63a6acb6c42cae2ece00bf715408f)  feat: add typescript declarations
+- [32467](https://github.com/fatmatto/throwable-http-errors/commit/32467700381cd60949dfb5ff6104857cfe3c4760)  Bump braces from 3.0.2 to 3.0.3 (#17)
+- [df5b4](https://github.com/fatmatto/throwable-http-errors/commit/df5b4718de426af4ede65225103db73ce3707309)  Bump word-wrap from 1.2.3 to 1.2.4 (#16)
+- [da4f6](https://github.com/fatmatto/throwable-http-errors/commit/da4f699dd539c7b1d002f4371d0d82a242678267)  Bump json5 from 1.0.1 to 1.0.2 (#15)
+- [63ace](https://github.com/fatmatto/throwable-http-errors/commit/63ace798cbe94cfaa692e163668d56d5bc8a32c5)  Bump flat from 4.1.0 to 5.0.2 (#12)
+- [37cc5](https://github.com/fatmatto/throwable-http-errors/commit/37cc552ac3e00f26aaa882af521ad4928c0a8078)  📒 Update CHANGELOG
 # 📦 2.0.2 (3 Aug 2022)
 - [1bd81](https://github.com/fatmatto/throwable-http-errors/commit/1bd8184f7e0c701df5cc0636feeff7173d09559b)  📦 Release 2.0.2
 - [c9dad](https://github.com/fatmatto/throwable-http-errors/commit/c9dad7ed2b8400bf00d78153f5170542cfc5274c)  chore: add release script
